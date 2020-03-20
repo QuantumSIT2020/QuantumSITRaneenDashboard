@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     "use strict";
 
     $('.sparkbar').sparkline('html', { type: 'bar' });
@@ -9,37 +9,36 @@ $(function(){
         width: '100px',
         height: '100px',
         sliceColors: ['#29bd73', '#182973', '#ffcd55']
-    })    
+    })
 
     // notification popup
     toastr.options.closeButton = true;
     toastr.options.positionClass = 'toast-bottom-right';
     toastr.options.showDuration = 1000;
-    toastr['info']('Hello, welcome to Oculux, a unique admin Template.');
+    toastr['info']('Hello, welcome to Raneen, a unique admin Template.');
 
 
     $('.knob').knob({
-		draw: function () {
-		}
-    }); 
+        draw: function() {}
+    });
     $(".rtl .knob").knob({
-		draw: function () {
-		   //style rtl
-			this.i.css({
-				'margin-right': '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px',
-				'margin-left': 'auto'
-			});
-		},
-	});   
-    
+        draw: function() {
+            //style rtl
+            this.i.css({
+                'margin-right': '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px',
+                'margin-left': 'auto'
+            });
+        },
+    });
+
 });
 
 $(function() {
-	"use strict";
+    "use strict";
     initSparkline();
-	
-	var values2 = getRandomValues();
-	var paramsBar = {
+
+    var values2 = getRandomValues();
+    var paramsBar = {
         type: 'bar',
         barWidth: 10,
         height: 80,
@@ -51,7 +50,7 @@ $(function() {
     $('#minibar-chart3').sparkline(values2[2], paramsBar);
     $('#minibar-chart4').sparkline(values2[3], paramsBar);
 
-	function getRandomValues() {
+    function getRandomValues() {
         // data setup
         var values = new Array(20);
 
@@ -66,11 +65,11 @@ $(function() {
 
     function randomVal() {
         return Math.floor(Math.random() * 80);
-	}
+    }
 });
 
 // C3 Chart js
-$(function(){
+$(function() {
     "use strict";
     // Small chart widgets
     var chart = c3.generate({
@@ -100,7 +99,7 @@ $(function(){
         },
         tooltip: {
             format: {
-                title: function (x) {
+                title: function(x) {
                     return '';
                 }
             }
@@ -154,7 +153,7 @@ $(function(){
         },
         tooltip: {
             format: {
-                title: function (x) {
+                title: function(x) {
                     return '';
                 }
             }
@@ -208,7 +207,7 @@ $(function(){
         },
         tooltip: {
             format: {
-                title: function (x) {
+                title: function(x) {
                     return '';
                 }
             }
@@ -262,7 +261,7 @@ $(function(){
         },
         tooltip: {
             format: {
-                title: function (x) {
+                title: function(x) {
                     return '';
                 }
             }
@@ -340,7 +339,7 @@ $(function(){
             ],
             type: 'bar', // default type of chart
             groups: [
-                [ 'data1', 'data2']
+                ['data1', 'data2']
             ],
             colors: {
                 'data1': '#db5087',
@@ -382,7 +381,7 @@ $(function(){
             ],
             type: 'area-spline', // default type of chart
             groups: [
-                [ 'data1', 'data2']
+                ['data1', 'data2']
             ],
             colors: {
                 'data1': '#e8608a',
@@ -410,7 +409,7 @@ $(function(){
             left: -7,
         },
     });
-    
+
     c3.generate({
         bindto: '#chart-pie', // id of chart wrapper
         data: {
@@ -436,8 +435,7 @@ $(function(){
                 'data4': 'Vivo',
             }
         },
-        axis: {
-        },
+        axis: {},
         legend: {
             show: true, //hide legend
         },
@@ -448,7 +446,7 @@ $(function(){
     });
 });
 
-$(function(){
+$(function() {
     "use strict";
     var dataStackedBar = {
         labels: ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6'],
